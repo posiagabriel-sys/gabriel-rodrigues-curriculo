@@ -93,7 +93,7 @@ const langObserver = new IntersectionObserver(
   { threshold: 0.4 }
 );
 
-document.querySelectorAll(".lang__bar").forEach((bar) => langObserver.observe(bar));
+document.querySelectorAll(".langs__bar").forEach((bar) => langObserver.observe(bar));
 
 /* —— Particle network (discreet) —— */
 (() => {
