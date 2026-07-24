@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo | Gabriel Cavalcanti Rodrigues</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("cv-theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <a href="#inicio" class="nav__brand">Gabriel Rodrigues</a>
+    <div class="nav__actions">
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro ou escuro" title="Alternar tema">
+        <i class="bi bi-sun-fill" id="themeIcon"></i>
+      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="fx" aria-hidden="true">
+    <canvas id="fxCanvas" class="fx__canvas"></canvas>
+    <div class="fx__grid"></div>
+    <div class="fx__orb fx__orb--1"></div>
+    <div class="fx__orb fx__orb--2"></div>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="hero__media">
+      <img
+        src="foto.jpg"
+        alt="Gabriel Cavalcanti Rodrigues"
+        class="hero__photo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+      />
+      <div class="hero__photo-fallback" aria-hidden="true">
+        <i class="bi bi-person"></i>
+      </div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__label">Currículo</p>
+      <h1 class="hero__name">Gabriel Cavalcanti Rodrigues</h1>
+      <p class="hero__tagline">É bom ser importante, mas mais importante é ser bom.</p>
+      <p class="hero__summary">
+        Guarulhos — SP · (11) 94704-5172<br />
+        <a href="mailto:gabriel.rodrigues@brasmalls.com.br">gabriel.rodrigues@brasmalls.com.br</a>
+      </p>
+      <div class="hero__cta">
+        <a href="#experiencia" class="btn btn--primary">Ver trajetória</a>
+        <a href="mailto:gabriel.rodrigues@brasmalls.com.br" class="btn btn--ghost">
+          <i class="bi bi-envelope"></i> Contato
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="experiencia">
+      <div class="section__head">
+        <span class="section__icon"><i class="bi bi-briefcase"></i></span>
+        <div>
+          <h2>Experiência profissional</h2>
+          <p>Gestão administrativa, processos, comercial e financeiro.</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__period">11/2020 — Atual</span>
+            <h3>Superintendente Administrativo e Comercial</h3>
+            <p class="timeline__company">Shopping VHT</p>
+          </div>
+          <ul class="timeline__points">
+            <li>Gestão administrativa, financeira e comercial do shopping.</li>
+            <li>Estratégias de expansão comercial e fortalecimento de marcas parceiras.</li>
+            <li>Acompanhamento de indicadores, contratos e negociações com lojistas.</li>
+            <li>Liderança de equipes operacionais e administrativas.</li>
+          </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__period">08/2018 — 10/2020</span>
+            <h3>Assistente / Gestor Administrativo e Controladoria</h3>
+            <p class="timeline__company">Shopping Total Brás, Shopping New Mall e Total Hotel</p>
+          </div>
+          <ul class="timeline__points">
+            <li>Contas a pagar, rotinas administrativas e suporte à gestão.</li>
+            <li>Atuação em diferentes unidades, com organização e priorização de demandas.</li>
+            <li>Controle de fornecedores.</li>
+          </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__period">07/2020 — 09/2020</span>
+            <h3>Analista de Dados Financeiros</h3>
+            <p class="timeline__company">Pagá Express <span class="timeline__note">(período complementar)</span></p>
+          </div>
+          <ul class="timeline__points">
+            <li>Fechamento de caixa em empresa de logística e transporte de cargas.</li>
+          </ul>
+        </article>
+
+        <article class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__period">01/2015 — 12/2018</span>
+            <h3>Assistente de Produção, Comercial e Administrativo</h3>
+            <p class="timeline__company">Êxito Artefatos Metálicos</p>
+          </div>
+          <ul class="timeline__points">
+            <li>Atuação em produção, comercial e administrativa.</li>
+            <li>Participação em fabricação, estratégias de vendas e relacionamento com clientes.</li>
+            <li>Controle financeiro: contas a pagar e a receber.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="formacao">
+      <div class="section__head">
+        <span class="section__icon"><i class="bi bi-mortarboard"></i></span>
+        <div>
+          <h2>Formação</h2>
+          <p>Base acadêmica e cursos complementares.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="info reveal">
+          <i class="bi bi-cpu info__icon"></i>
+          <div>
+            <h3>Pós-graduação em Estratégia e Desenvolvimento de Soluções de IA</h3>
+            <p class="info__sub">Anhanguera · Início 07/2026 · 12 meses · Cursando</p>
+          </div>
+        </article>
+        <article class="info reveal">
+          <i class="bi bi-award info__icon"></i>
+          <div>
+            <h3>Graduação em Administração</h3>
+            <p class="info__sub">ENIAC · 2020 — 2024</p>
+          </div>
+        </article>
+        <article class="info reveal">
+          <i class="bi bi-building info__icon"></i>
+          <div>
+            <h3>Graduação em Processos Gerenciais</h3>
+            <p class="info__sub">ENIAC · 2019 — 2020</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="courses reveal">
+        <h3 class="courses__title"><i class="bi bi-journal-bookmark"></i> Cursos complementares</h3>
+        <ul class="courses__list">
+          <li>Excel Avançado</li>
+          <li>Gestão Financeira — Sebrae</li>
+          <li>Administração — Sebrae</li>
+          <li>Contabilidade — Sebrae</li>
+          <li>Estratégia de Vendas — Sebrae</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="idiomas">
+      <div class="section__head">
+        <span class="section__icon"><i class="bi bi-translate"></i></span>
+        <div>
+          <h2>Idiomas</h2>
+          <p>Comunicação no dia a dia profissional.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="lang reveal">
+          <div class="lang__top">
+            <i class="bi bi-chat-dots"></i>
+            <h3>Português</h3>
+          </div>
+          <div class="lang__bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <span style="--level: 100%"></span>
+          </div>
+          <p>Nativo</p>
+        </article>
+        <article class="lang reveal">
+          <div class="lang__top">
+            <i class="bi bi-chat-dots"></i>
+            <h3>Inglês</h3>
+          </div>
+          <div class="lang__bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+            <span style="--level: 45%"></span>
+          </div>
+          <p>Cursando — Nimble Idiomas</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="projetos">
+      <div class="section__head">
+        <span class="section__icon"><i class="bi bi-lightning-charge"></i></span>
+        <div>
+          <h2>Projetos e competências</h2>
+          <p>Frentes em que atuo e entrego resultado.</p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project__icon"><i class="bi bi-shop"></i></div>
+          <h3>Gestão de shopping</h3>
+          <p>Administração financeira, comercial e operacional com foco em metas e indicadores.</p>
+          <div class="project__tags">
+            <span>Administrativo</span>
+            <span>Financeiro</span>
+            <span>Comercial</span>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project__icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>Expansão comercial</h3>
+          <p>Estratégias de vendas, fortalecimento de marcas parceiras e negociação com lojistas.</p>
+          <div class="project__tags">
+            <span>Vendas</span>
+            <span>Negociação</span>
+            <span>Parcerias</span>
+          </div>
+        </article>
+        <article class="project reveal">
+          <div class="project__icon"><i class="bi bi-people"></i></div>
+          <h3>Liderança de equipes</h3>
+          <p>Desenvolvimento de times operacionais e administrativos alinhados a resultados.</p>
+          <div class="project__tags">
+            <span>Liderança</span>
+            <span>Processos</span>
+            <span>Excel</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Gabriel Cavalcanti Rodrigues · Guarulhos — SP</p>
+    <div class="footer__links">
+      <a href="mailto:gabriel.rodrigues@brasmalls.com.br" aria-label="E-mail"><i class="bi bi-envelope"></i></a>
+      <a href="tel:+5511947045172" aria-label="Telefone"><i class="bi bi-telephone"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
