@@ -541,6 +541,32 @@ main,
   opacity: 0.5;
 }
 
+.timeline__units {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__role {
+  padding-left: 1rem;
+  border-left: 2px solid var(--line);
+  margin-bottom: 1.25rem;
+}
+
+.timeline__role:last-child {
+  margin-bottom: 0;
+}
+
+.timeline__role h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.timeline__role .timeline__period {
+  margin-bottom: 0.5rem;
+}
+
 /* —— Formação stack —— */
 .stack {
   display: flex;
